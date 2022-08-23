@@ -1,7 +1,7 @@
 const ItemListContainer = () => {
   return (
     <div className="container-sm">
-      <h3>Lista de productos</h3>
+      <h4>Lista de productos</h4>
     </div>
   );
 };
