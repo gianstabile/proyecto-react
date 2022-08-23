@@ -1,0 +1,37 @@
+.header__top{
+    background-color: black;
+    padding: 5px;
+}
+
+.nav__title{
+    display: flex;
+    align-items: center;
+}
+
+.nav__title__text{
+    font-family: 'Aboreto', cursive;
+    font-size: 1.5em;
+    color: white;
+}
+.logo__top{
+    height: 65px;
+}
+
+.menu__item{
+    padding-top:10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color:violet;
+    transition-duration: 0.5s;
+}
