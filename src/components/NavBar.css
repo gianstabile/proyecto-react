@@ -32,6 +32,6 @@ a{
 }
 
 a:hover{
-    color:violet;
+    color: MediumVioletRed;
     transition-duration: 0.5s;
 }
