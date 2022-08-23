@@ -1,6 +1,5 @@
 import logo from "../img/logo_m.png";
 import CartWidget from "./CartWidget";
-import ItemListContainer from "./ItemListContainer";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -34,13 +33,12 @@ const NavBar = () => {
             </li>
           </ul>
           <div
-            className="d-flex m-1 p-2"
+            className="d-flex m-1 p-2 h-50"
             data-toggle="tooltip"
             title="Tienes 3 productos en el carrito."
           >
-            <button className="d-flex gap-2 align-items-center btn btn-dark">
+            <button className="btn btn-dark">
               <CartWidget />
-              <ItemListContainer />
             </button>
           </div>
         </div>

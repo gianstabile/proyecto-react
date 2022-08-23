@@ -1,6 +1,9 @@
 const ItemListContainer = () => {
-    return (
-        <p className="h6">3</p>
-    );
-}
+  return (
+    <div className="container-sm">
+      <h3>Lista de productos</h3>
+    </div>
+  );
+};
+
 export default ItemListContainer;
