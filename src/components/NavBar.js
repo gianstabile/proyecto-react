@@ -1,4 +1,4 @@
-import logo from "../img/logo_chupetin.png";
+import logo from "../img/logo_m.png";
 import "./NavBar.css";
 
 const NavBar = () => {
