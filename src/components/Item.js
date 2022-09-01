@@ -12,7 +12,7 @@ const Item = ({ info }) => {
           <a href="#" className="btn btn-dark">
             Ver detalle
           </a>
-          <p className="card-text p-2 text-right">Stock: {info.stock} unidades</p>
+          <p className="card-text p-2">Stock: {info.stock} unidades</p>
         </div>
       </div>
   );
