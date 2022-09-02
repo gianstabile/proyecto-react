@@ -20,14 +20,25 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   };
 
   return (
-    <div className="container d-flex gap-3 p-3">
-      <button type="button" className="btn btn-dark" onClick={subtract}>-</button>
-      <h3>{count}</h3>
-      <button type="button" className="btn btn-dark" onClick={add}>+</button>
-      
-    
-        <button type="button" className="btn btn-dark" onClick={() => onAdd(count)}>Add to Cart</button>
-  
+    <div className="container d-flex gap-3 p-3 flex-column">
+      <div className="d-flex flex-row gap-4 justify-content-center">
+        <button type="button" className="btn btn-dark" onClick={subtract}>
+          -
+        </button>
+        <h3>{count}</h3>
+        <button type="button" className="btn btn-dark" onClick={add}>
+          +
+        </button>
+      </div>
+      <div className="d-flex justify-content-center">
+        <button
+          type="button"
+          className="btn btn-dark"
+          onClick={() => onAdd(count)}
+        >
+          Añadir al carrito
+        </button>
+      </div>
     </div>
   );
 };

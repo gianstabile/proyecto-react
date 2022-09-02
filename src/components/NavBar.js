@@ -13,13 +13,16 @@ const NavBar = () => {
         <nav className="nav__menu d-flex">
           <ul className="nav__menu__all d-flex justify-content-around gap-4 list-unstyled p-2">
             <li className="menu__item">
-              <a href="http://www.google.com/">Productos</a>
+              <a href="http://www.google.com/">Sex Toys</a>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Venta Mayorista</a>
+              <a href="http://www.google.com/">Cosmética y geles</a>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Contacto</a>
+              <a href="http://www.google.com/">Lencería</a>
+            </li>
+            <li className="menu__item">
+              <a href="http://www.google.com/">Bondaje</a>
             </li>
           </ul>
         </nav>
