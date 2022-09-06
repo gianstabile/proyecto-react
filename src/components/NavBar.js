@@ -51,7 +51,7 @@ const NavBar = () => {
             </li>
             <li className="menu__item">
               <NavLink
-                to="/carrito"
+                to="/cart"
                 className="d-flex m-1 p-2 h-50 link"
                 data-toggle="tooltip"
                 title="Tienes 3 productos en el carrito."
