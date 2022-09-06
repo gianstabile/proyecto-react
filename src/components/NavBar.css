@@ -23,17 +23,12 @@
   font-size: 1em;
 }
 
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
+.link {
+  color: white !important;
+  text-decoration: none !important;
 }
 
-a {
-  color: white;
-}
-
-a:hover {
-  color: MediumVioletRed;
-  transition-duration: 0.5s;
+.link:hover {
+  color: MediumVioletRed !important;
+  transition-duration: 0.5s !important;
 }

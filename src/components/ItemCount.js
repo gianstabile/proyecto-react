@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
+import { Button } from "reactstrap";
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   const [count, setCount] = useState(0);
@@ -22,22 +23,20 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   return (
     <div className="container d-flex gap-3 p-3 flex-column">
       <div className="d-flex flex-row gap-4 justify-content-center">
-        <button type="button" className="btn btn-dark" onClick={subtract}>
+        <Button color="dark" onClick={subtract}>
           -
-        </button>
+        </Button>
         <h3>{count}</h3>
-        <button type="button" className="btn btn-dark" onClick={add}>
+        <Button color="dark" onClick={add}>
           +
-        </button>
+        </Button>
       </div>
       <div className="d-flex justify-content-center">
-        <button
-          type="button"
-          className="btn btn-dark"
+        <Button color="dark"
           onClick={() => onAdd(count)}
         >
           Añadir al carrito
-        </button>
+        </Button>
       </div>
     </div>
   );

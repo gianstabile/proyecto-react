@@ -1,5 +1,6 @@
 import logo from "../img/logo_m.png";
 import CartWidget from "./CartWidget";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -8,42 +9,57 @@ const NavBar = () => {
       <div className="container__top d-flex justify-content-between align-items-center h-100">
         <div className="nav__title">
           <img src={logo} className="logo__top" alt="logo" />
-          <h2 className="nav__title__text">Greed Sexshop</h2>
+          <NavLink to="/" className="link">
+            <h2 className="nav__title__text">Greed Sexshop</h2>
+          </NavLink>
         </div>
         <nav className="nav__menu d-flex">
           <ul className="nav__menu__all d-flex justify-content-around gap-4 list-unstyled p-2">
             <li className="menu__item">
-              <a href="http://www.google.com/">Sex Toys</a>
+              <NavLink to="/categoria/sextoys" className="link">
+                Sex Toys
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Cosmética y geles</a>
+              <NavLink to="/categoria/cosmetica" className="link">
+                Cosmética y geles
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Lencería</a>
+              <NavLink to="/categoria/lenceria" className="link">
+                Lencería
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Bondaje</a>
+              <NavLink to="/categoria/bondage" className="link">
+                Bondaje
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <div className="nav__login d-flex justify-content-around align-items-center">
-          <ul className="nav__menu__all d-flex gap-3 list-unstyled">
+        <div className="nav__login d-flex ">
+          <ul className="nav__menu__all d-flex gap-3 list-unstyled justify-content-around align-items-center">
             <li className="menu__item">
-              <a href="http://www.google.com/">Registrarse</a>
+              <NavLink to="/registrar" className="link">
+                Registrarse
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a href="http://www.google.com/">Iniciar sesión</a>
+              <NavLink to="ingresar" className="link">
+                Iniciar sesión
+              </NavLink>
+            </li>
+            <li className="menu__item">
+              <NavLink
+                to="/carrito"
+                className="d-flex m-1 p-2 h-50 link"
+                data-toggle="tooltip"
+                title="Tienes 3 productos en el carrito."
+              >
+                <CartWidget />
+              </NavLink>
             </li>
           </ul>
-          <div
-            className="d-flex m-1 p-2 h-50"
-            data-toggle="tooltip"
-            title="Tienes 3 productos en el carrito."
-          >
-            <button className="btn btn-dark">
-              <CartWidget />
-            </button>
-          </div>
         </div>
       </div>
     </header>
