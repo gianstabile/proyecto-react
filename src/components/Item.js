@@ -9,7 +9,6 @@ const Item = ({ info }) => {
       <div className="card-body">
         <div className="d-flex flex-column justify-content-start">
           <h5 className="card-title text-center">{info.title}</h5>
-          {/* <p className="card-text">{info.description}</p> */}
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center pt-2">
           <p className="card-text h5 p-2">Precio: ${info.price}</p>

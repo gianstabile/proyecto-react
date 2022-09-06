@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(items);
-      }, 2000);
+      }, 1500);
     });
     if (id) {
       getData.then((res) => setData(res.filter((type) => type.category == id)));

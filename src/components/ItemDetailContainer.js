@@ -16,7 +16,9 @@ const ItemDetailContainer = () => {
       }, 1500);
     });
 
-    getData.then((res) => setData(res.find((item) => item.id === id)));
+    getData.then((res) =>
+      setData(res.find((item) => item.id === parseInt(id)))
+    );
   }, []);
 
   return (

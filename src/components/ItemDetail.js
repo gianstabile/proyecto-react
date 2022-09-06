@@ -12,8 +12,10 @@ const ItemDetail = ({ data }) => {
 
         <div className="col-5 item__info ps-5 pt-3">
           <h2>{data.title}</h2>
-          <p className="fs-5 fw-bold">Referencia: {data.reference}</p>
-          <p className="fs-5 pt-3 pe-4">{data.extDescription}</p>
+          <p className="fs-5">
+            <span className="fw-bold">Referencia:</span> {data.reference}
+          </p>
+          <p className="fs-5 pt-3 pe-4">{data.description}</p>
         </div>
 
         <div className="col-3 gx-1 d-flex flex-column align-items-center border rounded">

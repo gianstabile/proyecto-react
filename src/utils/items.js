@@ -10,6 +10,7 @@ const items = [
       alt: "Dados Eróticos Lugares-Posiciones",
       price: 600,
       stock: 100,
+      reference: "GS-ST-01430"
     },
     {
       id: 2,
@@ -23,7 +24,7 @@ const items = [
       alt: "Aceite para masajes y lubricante",
       price: 1300,
       stock: 150,
-      
+      reference: "GS-CS-01120"
     },
     {
       id: 3,
@@ -36,6 +37,7 @@ const items = [
       alt: "Collar de cuero ",
       price: 2500,
       stock: 50,
+      reference: "GS-BD-01320"
     },
     {
       id: 5,
@@ -49,6 +51,7 @@ const items = [
       alt: "Macizo con testículos y sopapa",
       price: 5300,
       stock: 30,
+      reference: "GS-ST-01440"
     },
     {
       id: 6,
@@ -62,6 +65,7 @@ const items = [
       alt: "Masturbador Masculino 23x10cm",
       price: 4300,
       stock: 50,
+      reference: "GS-ST-01520"
     },
     {
       id: 7,
@@ -75,6 +79,7 @@ const items = [
       alt: "Perfume con feromona femenina Sexitive Capricious",
       price: 4280,
       stock: 20,
+      reference: "GS-CS-01220"
     },
     {
       id: 8,
@@ -88,6 +93,7 @@ const items = [
       alt: "Crema intensificante Black Dragon 50ml",
       price: 2650,
       stock: 50,
+      reference: "GS-CS-01470"
     },
     {
       id: 9,
@@ -101,6 +107,7 @@ const items = [
       alt: "Body de puntilla abierto",
       price: 6500,
       stock: 20,
+      reference: "GS-LC-01432"
     },
     {
       id: 10,
@@ -114,6 +121,7 @@ const items = [
       alt: "Baby Doll de tul de lycra",
       price: 6750,
       stock: 20,
+      reference: "GS-LC-01451"
     },
     {
       id: 11,
@@ -127,6 +135,7 @@ const items = [
       alt: "Body de eco cuero",
       price: 3800,
       stock: 15,
+      reference: "GS-BD-01120"
     },
     {
       id: 12,
@@ -140,6 +149,7 @@ const items = [
       alt: "Arnés doble penetración",
       price: 2899,
       stock: 20,
+      reference: "GS-BD-04550"
     },
     {
       id: 13,
@@ -153,6 +163,7 @@ const items = [
       alt: "Fusta corta de cuero",
       price: 3100,
       stock: 20,
+      reference: "GS-BD-03320"
     },
   ];
 
