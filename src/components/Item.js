@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Item.css";
 
 const Item = ({ info }) => {
@@ -13,9 +13,9 @@ const Item = ({ info }) => {
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center pt-2">
           <p className="card-text h5 p-2">Precio: ${info.price}</p>
-          <NavLink to="#" className="btn btn-dark">
+          <Link to={`/item/${info.id}`} className="btn btn-dark">
             Ver detalle
-          </NavLink>
+          </Link>
           <p className="card-text p-2">Stock: {info.stock} unidades</p>
         </div>
       </div>

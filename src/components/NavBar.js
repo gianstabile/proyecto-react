@@ -16,22 +16,22 @@ const NavBar = () => {
         <nav className="nav__menu d-flex">
           <ul className="nav__menu__all d-flex justify-content-around gap-4 list-unstyled p-2">
             <li className="menu__item">
-              <NavLink to="/categoria/sextoys" className="link">
+              <NavLink to="/category/sextoys" className="link">
                 Sex Toys
               </NavLink>
             </li>
             <li className="menu__item">
-              <NavLink to="/categoria/cosmetica" className="link">
+              <NavLink to="/category/cosmetica" className="link">
                 Cosmética y geles
               </NavLink>
             </li>
             <li className="menu__item">
-              <NavLink to="/categoria/lenceria" className="link">
+              <NavLink to="/category/lenceria" className="link">
                 Lencería
               </NavLink>
             </li>
             <li className="menu__item">
-              <NavLink to="/categoria/bondage" className="link">
+              <NavLink to="/category/bondage" className="link">
                 Bondaje
               </NavLink>
             </li>

@@ -3,6 +3,7 @@ import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import items from "../utils/items";
 import Loader from "./Loader";
+import { useParams } from "react-router-dom";
 
 function onAdd(number) {
   alert("Tienes seleccionados " + number + " items.");
@@ -11,14 +12,20 @@ function onAdd(number) {
 const ItemListContainer = ({ greeting }) => {
   const [data, setData] = useState([]);
 
+  const { id } = useParams();
+
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(items);
       }, 2000);
     });
-    getData.then((res) => setData(res));
-  }, []);
+    if (id) {
+      getData.then((res) => setData(res.filter((type) => type.category == id)));
+    } else {
+      getData.then((res) => setData(res));
+    }
+  }, [id]);
 
   return (
     <>

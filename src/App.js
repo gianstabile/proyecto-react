@@ -16,8 +16,8 @@ function App() {
               <ItemListContainer greeting="Bienvenido a nuestra tienda online!" />
             }
           />
-          <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
-          <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
     </>

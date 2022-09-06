@@ -2,7 +2,7 @@ const items = [
     {
       id: 1,
       categoryId: 1,
-      category: "Sex Toys",
+      category: "sextoys",
       image:
         "https://www.puntosexshop.com.ar/thumb/1636053494027_800x800.jpg",
       title: "Dados Eróticos Lugares-Posiciones",
@@ -14,7 +14,7 @@ const items = [
     {
       id: 2,
       categoryId: 2,
-      category: "Cosmética",
+      category: "cosmetica",
       image:
         "https://www.puntosexshop.com.ar/thumb/1635461351828_800x800.jpg",
       title: "Aceite para masajes y lubricación comestible",
@@ -28,7 +28,7 @@ const items = [
     {
       id: 3,
       categoryId: 4,
-      category: "Bondage",
+      category: "bondage",
       image:
         "https://www.puntosexshop.com.ar/thumb/1645646982825_800x800.jpg",
       title: "Collar de cuero con púas",
@@ -40,7 +40,7 @@ const items = [
     {
       id: 5,
       categoryId: 1,
-      category: "Sex Toys",
+      category: "sextoys",
       image:
         "https://www.puntosexshop.com.ar/thumb/1634244407435_800x800.jpg",
       title: "Macizo con testículos y sopapa",
@@ -53,7 +53,7 @@ const items = [
     {
       id: 6,
       categoryId: 1,
-      category: "Sex Toys",
+      category: "sextoys",
       image:
         "https://www.puntosexshop.com.ar/thumb/1643049767514_800x800.jpg",
       title: "Masturbador Masculino 23x10cm",
@@ -66,7 +66,7 @@ const items = [
     {
       id: 7,
       categoryId: 2,
-      category: "Cosmética",
+      category: "cosmetica",
       image:
         "https://www.puntosexshop.com.ar/thumb/1635707538008_800x800.jpg",
       title: "Perfume con feromona femenina Sexitive Capricious",
@@ -79,7 +79,7 @@ const items = [
     {
       id: 8,
       categoryId: 2,
-      category: "Cosmética",
+      category: "cosmetica",
       image:
         "https://www.puntosexshop.com.ar/thumb/1635461007917_800x800.jpg",
       title: "Crema intensificante Black Dragon 50ml",
@@ -92,7 +92,7 @@ const items = [
     {
       id: 9,
       categoryId: 3,
-      category: "Lencería",
+      category: "lenceria",
       image:
         "https://www.puntosexshop.com.ar/thumb/1634409656405_800x800.jpg",
       title: "Body de puntilla abierto",
@@ -105,7 +105,7 @@ const items = [
     {
       id: 10,
       categoryId: 3,
-      category: "Lencería",
+      category: "lenceria",
       image:
         "https://www.puntosexshop.com.ar/thumb/1650914593621_800x800.jpg",
       title: "Baby Doll de tul de lycra con taza y cola less - Rojo",
@@ -118,7 +118,7 @@ const items = [
     {
       id: 11,
       categoryId: 4,
-      category: "Bondage",
+      category: "bondage",
       image:
         "https://www.puntosexshop.com.ar/thumb/1640907281136_400x400.jpg",
       title: "Body de eco cuero con inmovilizador de brazo",
@@ -131,7 +131,7 @@ const items = [
     {
       id: 12,
       categoryId: 4,
-      category: "Bondage",
+      category: "bondage",
       image:
         "https://www.puntosexshop.com.ar/thumb/1640369949104_800x800.jpg",
       title: "Arnés doble penetración - 3 aros",
@@ -144,7 +144,7 @@ const items = [
     {
       id: 13,
       categoryId: 4,
-      category: "Bondage",
+      category: "bondage",
       image:
         "https://www.puntosexshop.com.ar/thumb/1645744672884_800x800.jpg",
       title: "Fusta corta de cuero",

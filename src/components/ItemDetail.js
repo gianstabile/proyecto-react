@@ -15,7 +15,7 @@ const ItemDetail = ({ data }) => {
           <p className="fs-5 fw-bold">Referencia: {data.reference}</p>
           <p className="fs-5 pt-3 pe-4">{data.extDescription}</p>
         </div>
-        
+
         <div className="col-3 gx-1 d-flex flex-column align-items-center border rounded">
           <h5 className="flex-grow-1 fs-2 mt-5 text-end">${data.price}</h5>
           <p className="fs-5 text-end p-3">Stock: {data.stock} unidades.</p>
