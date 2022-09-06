@@ -3,6 +3,7 @@ import ItemListContainer from "../src/components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,13 +14,14 @@ function App() {
           <Route
             path="/"
             element={
-              <ItemListContainer greeting="Bienvenido a nuestra tienda online!" />
+              <ItemListContainer greeting="" />
             }
           />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

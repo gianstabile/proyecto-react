@@ -1,0 +1,26 @@
+.footer__title{
+    padding-bottom: 15px;
+}
+
+.img__pay{
+    width: 100px;
+    height: 60px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    object-fit: cover;
+}
+
+link {
+    color: white !important;
+    text-decoration: none !important;
+  }
+  
+  link:hover {
+    color: MediumVioletRed !important;
+    transition-duration: 0.5s !important;
+  }
+
+  .item__footer{
+    background-color: black !important;
+    color:white !important;
+  }

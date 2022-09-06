@@ -7,7 +7,7 @@ const ItemDetail = ({ data }) => {
     <div className="container-md p-5 border rounded">
       <div className="row gy-1">
         <div className="col-4 gx-1">
-          <img className="img-fluid" src={data.image} />
+          <img className="img-fluid rounded" src={data.image} />
         </div>
 
         <div className="col-5 item__info ps-5 pt-3">

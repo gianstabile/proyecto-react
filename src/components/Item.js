@@ -5,7 +5,7 @@ import "./Item.css";
 const Item = ({ info }) => {
   return (
     <div className="card card__container">
-      <img className="card-img-top" src={info.image} alt={info.alt} />
+      <img className="card-img-top rounded" src={info.image} alt={info.alt} />
       <div className="card-body">
         <div className="d-flex flex-column justify-content-start">
           <h5 className="card-title text-center">{info.title}</h5>
