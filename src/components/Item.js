@@ -1,23 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Button,
+} from "reactstrap";
 import "./Item.css";
 
 const Item = ({ info }) => {
   return (
-    <div className="card card__container">
-      <img className="card-img-top rounded" src={info.image} alt={info.alt} />
-      <div className="card-body">
-        <div className="d-flex flex-column justify-content-start">
-          <h5 className="card-title text-center">{info.title}</h5>
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center pt-2">
-          <p className="card-text h5 p-2">Precio: ${info.price}</p>
-          <Link to={`/item/${info.id}`} className="btn btn-dark">
-            Ver detalle
+    <div>
+      <Card body
+        style={{
+          width: "18rem",
+        }}
+      >
+        <img alt={info.alt} src={info.image} className="card-img-top"/>
+        <CardBody className="text-center gap-2">
+          <CardTitle tag="h5">{info.title}</CardTitle>
+          <CardSubtitle className="mb-2 text-muted" tag="h5">
+            Precio: ${info.price}
+          </CardSubtitle>
+
+          <Link to={`/item/${info.id}`}>
+            <Button color="dark">Ver detalle</Button>
           </Link>
-          <p className="card-text p-2">Stock: {info.stock} unidades</p>
-        </div>
-      </div>
+          <CardText>Stock: {info.stock} unidades</CardText>
+        </CardBody>
+      </Card>
     </div>
   );
 };
