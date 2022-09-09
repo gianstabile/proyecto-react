@@ -10,12 +10,12 @@
     object-fit: cover;
 }
 
-link {
+.link {
     color: white !important;
     text-decoration: none !important;
   }
   
-  link:hover {
+.link:hover {
     color: MediumVioletRed !important;
     transition-duration: 0.5s !important;
   }

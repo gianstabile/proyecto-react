@@ -28,7 +28,7 @@ const Item = ({ info }) => {
           <Link to={`/item/${info.id}`}>
             <Button color="dark">Ver detalle</Button>
           </Link>
-          <CardText>Stock: {info.stock} unidades</CardText>
+          <CardText className="text-success">Stock: {info.stock} unidades</CardText>
         </CardBody>
       </Card>
     </div>

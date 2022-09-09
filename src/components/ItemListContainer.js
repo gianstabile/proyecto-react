@@ -5,10 +5,6 @@ import items from "../utils/items";
 import Loader from "./Loader";
 import { useParams } from "react-router-dom";
 
-function onAdd(number) {
-  alert("Tienes seleccionados " + number + " items.");
-}
-
 const ItemListContainer = ({ greeting }) => {
   const [data, setData] = useState([]);
 

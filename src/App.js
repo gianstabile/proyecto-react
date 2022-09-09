@@ -2,9 +2,9 @@ import NavBar from "../src/components/NavBar";
 import ItemListContainer from "../src/components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
+import "./App.css";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route
             path="/"
             element={
-              <ItemListContainer greeting="" />
+              <ItemListContainer />
             }
           />
           <Route path="/category/:id" element={<ItemListContainer />} />

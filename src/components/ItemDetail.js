@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { Button } from "reactstrap";
 import "./ItemDetail.css";
+import "boxicons";
 
 const ItemDetail = ({ data }) => {
+  const [goToCart, setGoToCart] = useState(false);
+  const onAdd = (qty) => {
+    setGoToCart(true);
+  };
+
   return (
     <div className="container-md p-5 border rounded">
       <div className="row gy-1">
@@ -18,11 +26,27 @@ const ItemDetail = ({ data }) => {
           <p className="fs-5 pt-3 pe-4">{data.description}</p>
         </div>
 
-        <div className="col-3 gx-1 d-flex flex-column align-items-center border rounded">
-          <h5 className="flex-grow-1 fs-2 mt-5 text-end">${data.price}</h5>
-          <p className="fs-5 text-end p-3">Stock: {data.stock} unidades.</p>
-          <div className="mb-5">
-            <ItemCount initial={1} stock={data.stock} />
+        <div className="col-3 gx-1 d-flex flex-column justify-content-around align-items-center border rounded">
+          <h5 className="fs-2 mt-5 text-end pb-3">${data.price}</h5>
+          <p className="fs-5 text-end pb-3 text-success">
+            Stock: {data.stock} unidades.
+          </p>
+          <p className="text-success pt-2 fs-6">
+            <box-icon type="solid" name="truck"></box-icon> Envío gratis a todo
+            el país.
+          </p>
+          <p className="pt-2 fs-6 text-center">
+            <box-icon type="solid" name="left-down-arrow-circle"></box-icon>
+            Devolución bajo condiciones.
+          </p>
+          <div className="mb-5 pt-4">
+            {goToCart ? (
+              <Link to="/cart">
+                <Button color="dark">Terminar compra</Button>
+              </Link>
+            ) : (
+              <ItemCount initial={1} stock={data.stock} onAdd={onAdd} />
+            )}
           </div>
         </div>
       </div>

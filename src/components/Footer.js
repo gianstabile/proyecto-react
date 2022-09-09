@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="col-4 d-flex justify-content-center p-2">
           <div>
             <h5 className="text-center footer__title">NOSOTROS</h5>
-            <ul className="list-group">
+            <ul className="list-group list-unstyled">
               <li className="">Acerca de GREED SEXSHOP</li>
               <li className="">Sucursales y envíos</li>
               <li className="">Contacto</li>
             </ul>
             <h5 className="text-center footer__title mt-3">AYUDA</h5>
-            <ul>
+            <ul className="list-group list-unstyled">
               <li className="">Preguntas frecuentes</li>
               <li>Política de devolución</li>
             </ul>
@@ -59,12 +59,15 @@ const Footer = () => {
             <h5 className="text-center footer__title">GREED SEXSHOP</h5>
             <p>
               <i class="bx bx-building-house"></i>
-              <box-icon name='building-house'></box-icon><strong>Sucursal:</strong> San Martin 1420
+              <box-icon name="building-house"></box-icon>
+              <strong>Sucursal:</strong> San Martin 1420
             </p>
             <p>Retiros en sucursal de 9 a 16hs.</p>
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:info@greedshop.com.ar">info@greedshop.com.ar</a>{" "}
+              <a className="link" href="mailto:info@greedshop.com.ar">
+                info@greedshop.com.ar
+              </a>{" "}
             </p>
             <p>
               <strong>Tel/cel:</strong> (11) 426 3659{" "}

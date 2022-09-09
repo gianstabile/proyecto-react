@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import { Button } from "reactstrap";
 import items from "../utils/items";
 import { useParams } from "react-router-dom";
 
