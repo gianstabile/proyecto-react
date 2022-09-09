@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import "boxicons";
 
@@ -8,17 +9,41 @@ const Footer = () => {
       <div className="row">
         <div className="col-4 d-flex justify-content-center p-2">
           <div>
-            <h5 className="text-center footer__title">NOSOTROS</h5>
-            <ul className="list-group list-unstyled">
-              <li className="">Acerca de GREED SEXSHOP</li>
-              <li className="">Sucursales y envíos</li>
-              <li className="">Contacto</li>
-            </ul>
-            <h5 className="text-center footer__title mt-3">AYUDA</h5>
-            <ul className="list-group list-unstyled">
-              <li className="">Preguntas frecuentes</li>
-              <li>Política de devolución</li>
-            </ul>
+            <div>
+              <h5 className="text-center footer__title">NOSOTROS</h5>
+              <ul className="list-group list-unstyled">
+                <li className="">
+                  <a href="#" className="link">
+                    Acerca de GREED SEXSHOP
+                  </a>
+                </li>
+                <li className="">
+                  <a href="#" className="link">
+                    Sucursales y envíos
+                  </a>
+                </li>
+                <li className="">
+                  <a href="#" className="link">
+                    Contacto y ayuda
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-4">
+              <h5 className="text-center footer__title">AYUDA</h5>
+              <ul className="list-group list-unstyled">
+                <li className="">
+                  <a href="#" className="link">
+                    Preguntas frecuentes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="link">
+                    Política de devolución
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="col-4 d-flex justify-content-center p-2">

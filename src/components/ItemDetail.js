@@ -36,8 +36,7 @@ const ItemDetail = ({ data }) => {
             el país.
           </p>
           <p className="pt-2 fs-6 text-center">
-            <box-icon type="solid" name="left-down-arrow-circle"></box-icon>
-            Devolución bajo condiciones.
+            <box-icon type="solid" name="left-down-arrow-circle"></box-icon> Devolución bajo condiciones.
           </p>
           <div className="mb-5 pt-4">
             {goToCart ? (
