@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
 import "boxicons";
 
@@ -82,22 +81,23 @@ const Footer = () => {
         <div className="col-4 d-flex justify-content-center p-2">
           <div className="d-flex flex-column align-items-center">
             <h5 className="text-center footer__title">GREED SEXSHOP</h5>
-            <p>
-              <i class="bx bx-building-house"></i>
-              <box-icon name="building-house"></box-icon>
-              <strong>Sucursal:</strong> San Martin 1420
-            </p>
-            <p>Retiros en sucursal de 9 a 16hs.</p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a className="link" href="mailto:info@greedshop.com.ar">
-                info@greedshop.com.ar
-              </a>{" "}
-            </p>
-            <p>
-              <strong>Tel/cel:</strong> (11) 426 3659{" "}
-            </p>
-            <p> Buenos Aires, Argentina</p>
+            <div>
+
+              <p>
+              <box-icon name='building-house' type='solid' color="white"></box-icon>
+                 <strong> Sucursal: </strong> San Martin 1420, CABA
+              </p>
+              <p><box-icon type='solid' name='box' color="white"></box-icon> Retiros en sucursal de 9 a 16hs.</p>
+              <p> <box-icon name='envelope' type='solid' color="white"></box-icon>
+                <strong> Email: </strong>
+                <a className="link" href="mailto:info@greedshop.com.ar">
+                  info@greedshop.com.ar
+                </a>{" "}
+              </p>
+              <p><box-icon type='solid' name='phone' color="white"></box-icon>
+                <strong> Tel/cel: </strong> (11) 426 3659{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>
