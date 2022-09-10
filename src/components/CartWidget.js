@@ -1,5 +1,6 @@
 import "boxicons";
-
+import React from "react";
+ 
 const CartWidget = () => {
   return (
     <>

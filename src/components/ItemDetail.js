@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { Button } from "reactstrap";
+import { CartContext } from "../context/CartContext";
 import "./ItemDetail.css";
 import "boxicons";
 
 const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
+  const { addItem } = useContext(CartContext);
   const onAdd = (qty) => {
     setGoToCart(true);
+    addItem(data, qty);
   };
 
   return (
@@ -36,7 +39,8 @@ const ItemDetail = ({ data }) => {
             el país.
           </p>
           <p className="pt-2 fs-6 text-center">
-            <box-icon type="solid" name="left-down-arrow-circle"></box-icon> Devolución bajo condiciones.
+            <box-icon type="solid" name="left-down-arrow-circle"></box-icon>{" "}
+            Devolución bajo condiciones.
           </p>
           <div className="mb-5 pt-4">
             {goToCart ? (
