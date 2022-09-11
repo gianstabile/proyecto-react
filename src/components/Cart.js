@@ -19,7 +19,7 @@ const Cart = () => {
         </div>
         {cart.cartList.map((item) => (
           <div key={item.id} className="container">
-            <div className="row border rounded m-3 gap-3 justify-content-around align-items-center">
+            <div className="row border rounded m-3 gap-3 justify-content-between align-items-center p-2">
               <div className="col-1">
                 <img
                   className="img-thumbnail item__cart__img"

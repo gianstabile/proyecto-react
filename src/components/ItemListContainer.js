@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react";
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import items from "../utils/items";
-import Loader from "./Loader";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ greeting }) => {
   const [data, setData] = useState([]);
-
   const { id } = useParams();
 
   useEffect(() => {
     const getData = new Promise((resolve) => {
       setTimeout(() => {
         resolve(items);
-      }, 1500);
+      }, 500);
     });
     if (id) {
       getData.then((res) => setData(res.filter((type) => type.category == id)));
