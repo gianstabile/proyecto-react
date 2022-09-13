@@ -1,6 +1,7 @@
 import "boxicons";
 import React from "react";
- 
+import { Badge } from "reactstrap";
+
 const CartWidget = () => {
   return (
     <>
@@ -10,6 +11,9 @@ const CartWidget = () => {
         color="MediumVioletRed"
         animation="tada-hover"
       ></box-icon>
+      <Badge color="dark">
+        3
+      </Badge>
     </>
   );
 };

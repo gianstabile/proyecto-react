@@ -23,7 +23,7 @@ const ItemCount = ({ stock = 0, initial = 0, onAdd }) => {
   return (
     <div className="container d-flex gap-3 p-3 flex-column">
       <div className="d-flex flex-row gap-4 justify-content-center">
-        <Button color="dark" onClick={subtract}>
+        <Button color="dark" onClick={subtract} disabled={count? false : true}>
           -
         </Button>
         <h3>{count}</h3>
