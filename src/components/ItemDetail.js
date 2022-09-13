@@ -48,7 +48,7 @@ const ItemDetail = ({ data }) => {
                 <Button color="dark">Terminar compra</Button>
               </Link>
             ) : (
-              <ItemCount initial={1} stock={data.stock} onAdd={onAdd} />
+              <ItemCount initial={0} stock={data.stock} onAdd={onAdd} />
             )}
           </div>
         </div>

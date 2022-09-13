@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { Button } from "reactstrap";
 
-const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
+const ItemCount = ({ stock = 0, initial = 0, onAdd }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -32,7 +32,9 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
         </Button>
       </div>
       <div className="d-flex justify-content-center">
-        <Button color="dark"
+        <Button
+          color="dark"
+          disabled={stock && count ? false : true}
           onClick={() => onAdd(count)}
         >
           Añadir al carrito
