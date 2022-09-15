@@ -1,19 +1,19 @@
 import "boxicons";
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { Badge } from "reactstrap";
 
 const CartWidget = () => {
+  const { totalProducts } = useContext(CartContext);
+
   return (
     <>
       <box-icon
         type="solid"
         name="cart"
         color="MediumVioletRed"
-        animation="tada-hover"
       ></box-icon>
-      <Badge color="dark">
-        3
-      </Badge>
+      <Badge color="dark">{totalProducts() || ""}</Badge>
     </>
   );
 };
