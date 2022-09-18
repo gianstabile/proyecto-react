@@ -1,24 +1,29 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import items from "../utils/items";
 import { useParams } from "react-router-dom";
+import { db } from "../utils/firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [data, setData] = useState([]);
-  const { id } = useParams();
+  const { idCategory } = useParams();
 
   useEffect(() => {
-    const getData = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(items);
-      }, 500);
-    });
-    if (id) {
-      getData.then((res) => setData(res.filter((type) => type.category == id)));
+    const queryCollection = collection(db, "items");
+    if (idCategory) {
+      const queryFilter = query(
+        queryCollection,
+        where("category", "==", idCategory)
+      );
+      getDocs(queryFilter).then((res) =>
+        setData(res.docs.map((item) => ({ id: item.id, ...item.data() })))
+      );
     } else {
-      getData.then((res) => setData(res));
+      getDocs(queryCollection).then((res) =>
+        setData(res.docs.map((item) => ({ id: item.id, ...item.data() })))
+      );
     }
-  }, [id]);
+  }, [data]);
 
   return (
     <>

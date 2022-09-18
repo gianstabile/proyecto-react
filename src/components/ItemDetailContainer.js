@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ItemDetail from "./ItemDetail";
-import items from "../utils/items";
 import { useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 
 const ItemDetailContainer = () => {
   const [data, setData] = useState({});
@@ -9,16 +10,9 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const getData = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(items);
-      }, 500);
-    });
-
-    getData.then((res) =>
-      setData(res.find((item) => item.id === parseInt(id)))
-    );
-  }, []);
+    const queryDoc = doc(db, "items", id);
+    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
+  }, [id]);
 
   return (
     <>
