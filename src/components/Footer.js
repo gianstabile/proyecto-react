@@ -50,30 +50,12 @@ const Footer = () => {
             <h5 className="text-center footer__title">MEDIOS DE PAGO</h5>
             <div className="container">
               <div className="d-flex align-items-center justify-content-center flex-wrap gap-2 ">
-                <img
-                  className="img__pay"
-                  src="https://http2.mlstatic.com/resources/frontend/landings-mp/images/mercadopago-og.jpg"
-                ></img>
-                <img
-                  className="img__pay"
-                  src="https://i2.wp.com/www.vaccaroweb.com.ar/wp-content/uploads/2017/10/posteo-todopago.png?fit=820%2C480"
-                ></img>
-                <img
-                  className="img__pay"
-                  src="https://play-lh.googleusercontent.com/4c1KPBEe937CdWMTBDj1SHfBIhEntzS3T7sRsB_GMDzcBOBx53Aj5tZldsIdAjR-AQ"
-                ></img>
-                <img
-                  className="img__pay"
-                  src="http://www.brandemia.org/wp-content/uploads/2013/04/Banelco_4.jpg"
-                ></img>
-                <img
-                  className="img__pay"
-                  src="https://www.reclamosargentina.com/wp-content/uploads/2019/06/red-link-argentina-reclamos.jpg"
-                ></img>
-                <img
-                  className="img__pay"
-                  src="https://www.expensaspagas.com.ar/wp-content/uploads/2020/06/Banco-Nacion.png"
-                ></img>
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/mercadopago_fhdotm.jpg" />
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/todopago_wnskze.jpg" />
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/lemon_mnrfnl.jpg" />
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/banelco_ltpgm2.jpg" />
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/link_dnpkxs.jpg" />
+                <img className="img__pay" src="https://res.cloudinary.com/dghlpjgni/image/upload/v1663522505/logos/mediosdepago/nacion_icgwm5.jpg" />
               </div>
             </div>
           </div>

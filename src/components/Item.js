@@ -1,13 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
-} from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from "reactstrap";
 import "./Item.css";
 
 const Item = ({ info }) => {

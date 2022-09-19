@@ -6,24 +6,17 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
-  const { idCategory } = useParams();
+  const { category } = useParams();
 
   useEffect(() => {
     const queryCollection = collection(db, "items");
-    if (idCategory) {
-      const queryFilter = query(
-        queryCollection,
-        where("category", "==", idCategory)
-      );
-      getDocs(queryFilter).then((res) =>
-        setData(res.docs.map((item) => ({ id: item.id, ...item.data() })))
-      );
+    if (category) {
+      const queryFilter = query(queryCollection, where("category", "==", category));
+      getDocs(queryFilter).then((res) => setData(res.docs.map((item) => ({ id: item.id, ...item.data() }))));
     } else {
-      getDocs(queryCollection).then((res) =>
-        setData(res.docs.map((item) => ({ id: item.id, ...item.data() })))
-      );
+      getDocs(queryCollection).then((res) => setData(res.docs.map((item) => ({ id: item.id, ...item.data() }))));
     }
-  }, [data]);
+  }, [category]);
 
   return (
     <>
