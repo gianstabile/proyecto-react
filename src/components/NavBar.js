@@ -5,7 +5,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <header className="header__top container-sm text-light shadow p-3 mb-4 bg-black rounded">
+    <header className="header__top container-md text-light shadow p-3 mb-4 bg-black rounded">
       <div className="container__top d-flex justify-content-between align-items-center h-100">
         <div className="nav__title">
           <img src={logo} className="logo__top" alt="logo" />

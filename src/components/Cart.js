@@ -3,11 +3,37 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import "./Cart.css";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const Cart = () => {
   const { clearCart, cartList, removeItem, totalPrice } =
     useContext(CartContext);
 
+  //Comprador hardcodeado
+  const order = {
+    buyer: {
+      name: "Juan Pablo",
+      email: "juanporozco@gmail.com",
+      phone: "29848564287",
+      address: "Libertad 150",
+    },
+    items: cartList.map((item) => ({
+      id: item.id,
+      title: item.title,
+      price: item.price,
+      quantity: item.qty,
+    })),
+    total: totalPrice(),
+  };
+
+  //Función de terminar compra
+  const handleClick = () => {
+    const db = getFirestore();
+    const orderCollection = collection(db, "orders");
+    addDoc(orderCollection, order).then(({ id }) => console.log(id));
+  };
+
+  //Mensaje cuando el carrito está vacío
   if (cartList.length === 0) {
     return (
       <div className="mb-4 container">
@@ -96,10 +122,15 @@ const Cart = () => {
             </div>
           </div>
         ))}
-        <div className="container m-3 p-2 d-flex justify-content-end">
+        <div className="container mt-3 p-2 d-flex justify-content-end">
           <h5 className="border rounded p-4">
             Total: <span className="text-success">${totalPrice()}</span>
           </h5>
+        </div>
+        <div className="d-flex justify-content-end p-2">
+          <Button color="dark" className="p-3" onClick={handleClick}>
+            Terminar compra
+          </Button>
         </div>
       </div>
     </>
