@@ -44,9 +44,14 @@ const ItemDetail = ({ data }) => {
           </p>
           <div className="mb-5 pt-4">
             {goToCart ? (
-              <Link to="/cart">
-                <Button color="dark">Terminar compra</Button>
-              </Link>
+              <div>
+                <Link to="/cart">
+                  <Button color="dark" className="m-1">Ir al carrito</Button>
+                </Link>
+                <Link to="/">
+                  <Button color="dark">Seguir comprando</Button>
+                </Link>
+              </div>
             ) : (
               <ItemCount initial={0} stock={data.stock} onAdd={onAdd} />
             )}
