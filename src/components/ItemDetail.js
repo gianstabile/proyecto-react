@@ -45,11 +45,11 @@ const ItemDetail = ({ data }) => {
           <div className="mb-5 pt-4">
             {goToCart ? (
               <div>
-                <Link to="/cart">
-                  <Button color="dark" className="m-1">Ir al carrito</Button>
-                </Link>
                 <Link to="/">
                   <Button color="dark">Seguir comprando</Button>
+                </Link>
+                <Link to="/cart">
+                  <Button color="dark" className="m-1">Ir al carrito</Button>
                 </Link>
               </div>
             ) : (

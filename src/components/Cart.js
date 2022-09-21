@@ -3,11 +3,19 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import "./Cart.css";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  getFirestore,
+  serverTimestamp,
+} from "firebase/firestore";
 
 const Cart = () => {
   const { clearCart, cartList, removeItem, totalPrice } =
     useContext(CartContext);
+
+  const discount = 0;
+  const delivery = 0;
 
   //Comprador hardcodeado
   const order = {
@@ -17,20 +25,27 @@ const Cart = () => {
       phone: "29848564287",
       address: "Libertad 150",
     },
+    date: serverTimestamp(),
     items: cartList.map((item) => ({
       id: item.id,
       title: item.title,
       price: item.price,
       quantity: item.qty,
     })),
-    total: totalPrice(),
+    total: totalPrice() + -discount + delivery,
   };
 
   //Función de terminar compra
-  const handleClick = () => {
+  const createOrder = () => {
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
-    addDoc(orderCollection, order).then(({ id }) => console.log(id));
+
+    addDoc(orderCollection, order)
+      .then(({ id }) =>
+        alert("Tu orden de compra se creó correctamente." + "\n" + "ID:  " + id)
+      )
+      .catch((res) => console.log(res));
+    clearCart();
   };
 
   //Mensaje cuando el carrito está vacío
@@ -68,69 +83,95 @@ const Cart = () => {
             Limpiar todo
           </button>
         </div>
-        <div className="row m-3 gap-3 justify-content-between align-items-center mt-5 ">
-          <div className="container col-1">
-            <h6>Thumbnail</h6>
-          </div>
-          <div className="container col-5">
-            <h6>Detalle de producto</h6>
-          </div>
-          <div className="container col-1">
-            <h6>Cantidad</h6>
-          </div>
-          <div className="container col-1">
-            <h6>$ Unidad</h6>
-          </div>
-          <div className="container col-1">
-            <h6>Subtotal</h6>
-          </div>
-          <div className="container col-1">
-            <h6>Eiminar</h6>
-          </div>
-        </div>
-
-        {cartList.map((item) => (
-          <div key={item.id} className="container">
-            <div className="row border rounded m-3 gap-3 justify-content-between align-items-center p-2">
-              <div className="col-1">
-                <img
-                  className="img-thumbnail item__cart__img"
-                  src={item.image}
-                  alt={item.alt}
-                />
+        <div className="row">
+          <div className="col-9 container">
+            <div className="row m-3 mt-5 gap-3 justify-content-between align-items-center">
+              <div className="container col-1">
+                <h6>Thumbnail</h6>
               </div>
-              <div className="col-5">
-                <p className="fs-5 lead">{item.title}</p>
+              <div className="container col-4">
+                <h6>Detalle de producto</h6>
               </div>
-              <div className="col-1">
-                <p className="fs-5 lead ms-4">x {item.qty}</p>
+              <div className="container col-1">
+                <h6>Cantidad</h6>
               </div>
-              <div className="col-1">
-                <p className="fs-5 ms-2">$ {item.price}</p>
+              <div className="container col-1">
+                <h6>$ Un.</h6>
               </div>
-              <div className="col-1">
-                <p className="fs-5 ms-1">$ {item.qty * item.price}</p>
+              <div className="container col-1">
+                <h6>Subtotal</h6>
               </div>
-              <div className="col-1">
-                <button
-                  onClick={() => removeItem(item.id)}
-                  className="btn btn-dark me-2 ms-3"
-                >
-                  X
-                </button>
+              <div className="container col-1">
+                <h6>Eiminar</h6>
               </div>
             </div>
+
+            {cartList.map((item) => (
+              <div key={item.id} className="container mt-1 p-1">
+                <div className="row border rounded m-1 justify-content-between align-items-center p-2">
+                  <div className="col-1">
+                    <img
+                      className="img-thumbnail item__cart__img"
+                      src={item.image}
+                      alt={item.alt}
+                    />
+                  </div>
+                  <div className="col-4">
+                    <p className="fs-5 lead">{item.title}</p>
+                  </div>
+                  <div className="col-1">
+                    <p className="fs-5 lead text-center">x {item.qty}</p>
+                  </div>
+                  <div className="col-1">
+                    <p className="fs-5 text-center">${item.price}</p>
+                  </div>
+                  <div className="col-1">
+                    <p className="fs-5 text-center">${item.qty * item.price}</p>
+                  </div>
+                  <div className="col-1">
+                    <button
+                      onClick={() => removeItem(item.id)}
+                      className="btn btn-dark me-2 ms-3"
+                    >
+                      X
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-        <div className="container mt-3 p-2 d-flex justify-content-end">
-          <h5 className="border rounded p-4">
-            Total: <span className="text-success">${totalPrice()}</span>
-          </h5>
-        </div>
-        <div className="d-flex justify-content-end p-2">
-          <Button color="dark" className="p-3" onClick={handleClick}>
-            Terminar compra
-          </Button>
+
+          <div className="col-3 container">
+            <div className="row mt-5 justify-content-between align-items-center">
+              <div>
+                <h5 className="text-center">Resumen de compra</h5>
+              </div>
+            </div>
+            <div className="container p-3">
+              <div className="border rounded p-4 d-flex flex-column gap-4 justify-content-between align-items-center">
+                <h6>Subtotal: ${totalPrice()}</h6>
+                <h6>
+                  Costo de envíos:{" "}
+                  <span className="text-success">${delivery}</span>
+                </h6>
+                <h6>
+                  Descuentos: <span className="text-success">-${discount}</span>
+                </h6>
+                <h5>
+                  {" "}
+                  Total:{" "}
+                  <span className="text-success">
+                    ${totalPrice() + -discount + delivery}
+                  </span>
+                </h5>
+              </div>
+            </div>
+            <div className="d-flex justify-content-end p-2">
+              <Button color="dark" className="p-3" onClick={createOrder}>
+                Terminar compra
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </>
