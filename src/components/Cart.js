@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 import "./Cart.css";
 import {
+  doc,
   addDoc,
+  updateDoc,
   collection,
   getFirestore,
   serverTimestamp,
+  increment,
 } from "firebase/firestore";
 
 const Cart = () => {
@@ -44,7 +47,14 @@ const Cart = () => {
       .then(({ id }) =>
         alert("Tu orden de compra se creó correctamente." + "\n" + "ID:  " + id)
       )
-      .catch((res) => console.log(res));
+      .catch((err) => console.log(err));
+    //actualizo el stock
+    cartList.map((item) => {
+      const itemRef = doc(db, "items", item.id);
+      updateDoc(itemRef, {
+        stock: increment(-item.qty),
+      });
+    });
     clearCart();
   };
 
@@ -62,7 +72,7 @@ const Cart = () => {
           </button>
         </div>
         <div className="container mt-3 mb-5">
-          <p className="fs-5">No tienes elementos añadidos al carrito.</p>
+          <p className="fs-5">No tienes elementos añadidos a tu carrito.</p>
           <Link to="/">
             <Button color="dark">Ir a comprar</Button>
           </Link>
@@ -141,7 +151,7 @@ const Cart = () => {
             ))}
           </div>
 
-          <div className="col-3 container">
+          <div className="col-3 container justify-content-center">
             <div className="row mt-5 justify-content-between align-items-center">
               <div>
                 <h5 className="text-center">Resumen de compra</h5>
@@ -166,7 +176,7 @@ const Cart = () => {
                 </h5>
               </div>
             </div>
-            <div className="d-flex justify-content-end p-2">
+            <div className="d-flex justify-content-center mt-1">
               <Button color="dark" className="p-3" onClick={createOrder}>
                 Terminar compra
               </Button>
