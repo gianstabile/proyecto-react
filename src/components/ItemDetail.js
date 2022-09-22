@@ -34,12 +34,16 @@ const ItemDetail = ({ data }) => {
           <p className="fs-5 text-end pb-3 text-success">
             Stock: {data.stock} unidades.
           </p>
-          <p className="text-success pt-2 fs-6">
-            <box-icon type="solid" name="truck"></box-icon> Envío gratis a todo
-            el país.
+          <p className="text-success pt-2 fs-6 d-flex align-items-center gap-1">
+            <box-icon type="solid" name="truck"></box-icon>
+            Envío: ${data.delivery}
           </p>
-          <p className="pt-2 fs-6 text-center">
-            <box-icon type="solid" name="left-down-arrow-circle"></box-icon>{" "}
+          <p className="text-success pt-2 fs-6 d-flex align-items-center gap-1">
+            <box-icon type="solid" name="discount"></box-icon>
+            Descuento: {data.discount}% OFF
+          </p>
+          <p className="pt-2 fs-6 text-center d-flex align-items-center gap-1">
+            <box-icon type="solid" name="left-down-arrow-circle"></box-icon>
             Devolución bajo condiciones.
           </p>
           <div className="mb-5 pt-4">
@@ -49,7 +53,9 @@ const ItemDetail = ({ data }) => {
                   <Button color="dark">Seguir comprando</Button>
                 </Link>
                 <Link to="/cart">
-                  <Button color="dark" className="m-1">Ir al carrito</Button>
+                  <Button color="dark" className="m-1">
+                    Ir al carrito
+                  </Button>
                 </Link>
               </div>
             ) : (

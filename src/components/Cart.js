@@ -58,7 +58,6 @@ const Cart = () => {
     clearCart();
   };
 
-  //Mensaje cuando el carrito está vacío
   if (cartList.length === 0) {
     return (
       <div className="mb-4 container">
@@ -169,10 +168,7 @@ const Cart = () => {
                 </h6>
                 <h5>
                   {" "}
-                  Total:{" "}
-                  <span className="text-success">
-                    ${totalPrice() + -discount + delivery}
-                  </span>
+                  Total: <span className="text-success">${totalPrice()}</span>
                 </h5>
               </div>
             </div>
