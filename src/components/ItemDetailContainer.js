@@ -11,7 +11,9 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const queryDoc = doc(db, "items", id);
-    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() })).catch((res) => console.log(res));
+    getDoc(queryDoc)
+      .then((res) => setData({ id: res.id, ...res.data() }))
+      .catch((res) => console.log(res));
   }, [id]);
 
   return (

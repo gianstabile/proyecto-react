@@ -49,15 +49,15 @@ const ItemDetail = ({ data }) => {
               </p>
               <p className="text-success pt-2 fs-6 d-flex align-items-center gap-1">
                 <box-icon type="solid" name="truck"></box-icon>
-                Envío: ${data.delivery}
+                Envío: FREE
               </p>
               <p className="text-success pt-2 fs-6 d-flex align-items-center gap-1">
                 <box-icon type="solid" name="discount"></box-icon>
-                Descuento: {data.discount}% OFF
+                Cuotas sin interés
               </p>
               <p className="pt-2 fs-6 text-center d-flex align-items-center gap-1">
                 <box-icon type="solid" name="left-down-arrow-circle"></box-icon>
-                Devolución bajo condiciones.
+                Devolución bajo condiciones
               </p>
               <div className="mb-5 pt-4">
                 {goToCart ? (

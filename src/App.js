@@ -20,24 +20,27 @@ function App() {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <BrowserRouter>
-            <CartProvider>
-              <NavBar />
+      <BrowserRouter>
+        <CartProvider>
+          <NavBar />
+          <div>
+            {loading ? (
+              <Loader />
+            ) : (
               <Routes>
                 <Route path="/" element={<ItemListContainer />} />
-                <Route path="/category/:category" element={<ItemListContainer />} />
+                <Route
+                  path="/category/:category"
+                  element={<ItemListContainer />}
+                />
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
                 <Route path="/cart" element={<Cart />} />
               </Routes>
-            </CartProvider>
-          </BrowserRouter>
-          <Footer />
-        </>
-      )}
+            )}
+          </div>
+        </CartProvider>
+      </BrowserRouter>
+      <Footer />
     </>
   );
 }
