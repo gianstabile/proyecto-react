@@ -28,6 +28,15 @@ Los componentes creados hasta el momento son:
 Se incorpora una base de datos no relacional, utilizando el servicio de Google, Firebase. 
 Luego se utiliza también el servicio de Firestore para generar la orden de compra.
 
+### Screenshots 🖼️
+
+![App Screenshot](https://res.cloudinary.com/dghlpjgni/image/upload/v1663938536/screenshots/01_kdw3zv.jpg)
+
+![App Screenshot](https://res.cloudinary.com/dghlpjgni/image/upload/v1663938536/screenshots/03_gf0ujm.jpg)
+
+### Navegación 🎞️
+
+[![Alt text](https://res.cloudinary.com/dghlpjgni/image/upload/v1663939133/screenshots/thumb_ozkxos.jpg)](https://youtu.be/PzE0mEhu30I)
 
 ## Experiencia personal 
 
