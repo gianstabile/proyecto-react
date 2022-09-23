@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
-import "./Cart.css";
 import { doc, addDoc, updateDoc, collection, getFirestore, serverTimestamp, increment} from "firebase/firestore";
 import Loader from "./Loader";
+import swal from 'sweetalert';
+import "./Cart.css";
 
 const Cart = () => {
   const { clearCart, cartList, removeItem, totalPrice } =
@@ -43,7 +44,7 @@ const Cart = () => {
 
     addDoc(orderCollection, order)
       .then(({ id }) =>
-        alert("Tu orden de compra se creó correctamente." + "\n" + "ID:  " + id)
+        swal("Orden generada","Tu orden de compra se creó correctamente." + "\n" + "ID:  " + id, "success")
       )
       .catch((err) => console.log(err));
     //actualizo el stock
